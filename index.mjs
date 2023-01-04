@@ -1,7 +1,7 @@
 import "dotenv/config.js";
 import { db } from "./db/connection.mjs";
 import InitializeModels from "./db/Models.mjs";
-import { recursivelySaveToDB } from "./lib/fsTree.mjs";
+import { recursivelySaveToDB } from "./core/fsTree.mjs";
 
 await db.authenticate();
 const { File, Folder } = await InitializeModels(db);
