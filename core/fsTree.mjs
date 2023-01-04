@@ -1,6 +1,5 @@
 import { promises as fs, statSync, existsSync } from "fs";
 
-
 /**
  * gets the content of a folder sorted by type (files and folder).
  *
@@ -8,11 +7,11 @@ import { promises as fs, statSync, existsSync } from "fs";
  * @param FolderId -  the id of the folder in the DB
  * @return object with files and folders array
  */
-export async function getSortedContent(path = "", FolderId) {
-  const dir = await fs.readdir(path || "/");
+export async function getSortedContent(path, FolderId) {
+  const dir = await fs.readdir(path);
   const children = dir.reduce(
     (result, name) => {
-      const fullPath = path + "/" + name;
+      const fullPath = path != "/" ? path + "/" + name : "/" + name;
       let stat;
       try {
         stat = statSync(fullPath);

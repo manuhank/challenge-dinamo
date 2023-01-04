@@ -9,8 +9,8 @@ const { File, Folder } = await InitializeModels(db);
 await db.sync();
 
 //getting path from args
-const rootPath = process.argv[3] ?? "/";
-
+const rootPath = process.argv[2] ?? "/";
+console.log(rootPath);
 //creating root node and recursively saving it's content
 const rootFolder = await Folder.create({name: rootPath, fullPath: rootPath})
 await recursivelySaveToDB(File, Folder, rootPath, rootFolder.id);
