@@ -22,5 +22,8 @@ Then, with your DB running execute:
 
 ## Usage
 
-Simply run `npm start path`, replacing "path" with a valid path. If no path is provided, the script will start from the root of the fs.
+Simply run `npm start path`, replacing "path" with a valid path. 
+Example: `npm start "."`
+
+If no path is provided, the script will start from the root of the fs.
 
