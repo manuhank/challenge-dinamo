@@ -1,18 +1,25 @@
 import { DataTypes } from "sequelize";
 
-const pathConfig = {
-  type: DataTypes.STRING,
-  allowNull: false,
-};
-
 export default (sequelize) => {
   const File = sequelize.define("File", {
-    name: pathConfig,
-    fullPath: pathConfig,
+    name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    fullPath: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
   });
   const Folder = sequelize.define("Folder", {
-    name: pathConfig,
-    fullPath: pathConfig,
+    name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    fullPath: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
   });
   Folder.hasMany(Folder, { onDelete: "cascade" });
   Folder.belongsTo(Folder);
