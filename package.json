@@ -3,7 +3,7 @@
     "start": "node index.mjs",
     "setup": "npm install && cp .env.example .env && npm run start:db", 
     "start:db": "docker-compose up --detach",
-    "setup:db": "node ./db/setup"
+    "migration:db": "node ./db/migration"
   },
   "dependencies": {
     "dotenv": "^16.0.3",
