@@ -1,6 +1,12 @@
 {
+  "scripts": {
+    "start": "ts-node index.ts",
+    "start:DB": "docker-compose up",
+    "setup": "node ./db/setup"
+  },
   "dependencies": {
-    "sequelize": "^6.28.0",
-    "sqlite3": "^5.1.4"
+    "dotenv": "^16.0.3",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.28.0"
   }
 }
