@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "start": "ts-node index.ts",
+    "start": "node index.mjs",
     "start:DB": "docker-compose up",
     "setup": "node ./db/setup"
   },

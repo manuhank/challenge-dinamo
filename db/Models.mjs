@@ -1,5 +1,5 @@
-const { DataTypes } = require("sequelize");
-module.exports = (sequelize) => {
+import { DataTypes } from "sequelize";
+export default (sequelize) => {
   const File = sequelize.define("File", {
     name: DataTypes.STRING,
     extension: DataTypes.STRING,
@@ -9,5 +9,7 @@ module.exports = (sequelize) => {
   });
   Folder.hasMany(Folder);
   Folder.belongsTo(Folder);
+  Folder.hasMany(File);
+  File.belongsTo(Folder);
   return { File, Folder };
 };
