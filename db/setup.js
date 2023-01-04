@@ -11,4 +11,5 @@ mysql
     connection.query(
       `CREATE DATABASE IF NOT EXISTS ${DB_DATABASE};`
     );
+    connection.end();
   });

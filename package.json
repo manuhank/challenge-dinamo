@@ -1,8 +1,9 @@
 {
   "scripts": {
     "start": "node index.mjs",
-    "start:DB": "docker-compose up",
-    "setup": "node ./db/setup"
+    "setup": "npm install && cp .env.example .env && npm run start:db", 
+    "start:db": "docker-compose up --detach",
+    "setup:db": "node ./db/setup"
   },
   "dependencies": {
     "dotenv": "^16.0.3",
