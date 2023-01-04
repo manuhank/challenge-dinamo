@@ -29,4 +29,4 @@ If no path is provided, the script will start from the root of the fs.
 
 ## DB schema
 
-![schema](https://imageup.me/images/60000436-58d2-4062-a773-bc8004e64215.png)
+![schema](https://i.ibb.co/7GyJ6Qz/Captura-de-pantalla-2023-01-04-a-la-s-19-32-44.png)
